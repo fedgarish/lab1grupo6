@@ -1,110 +1,142 @@
 <p align="center">
-  <img src="Evidencias/logo-uide.webp" width="300">
+  <img src="Evidencias/logo-uide.webp" width="220" alt="Logo UIDE">
 </p>
-<h1>Laboratorio 1 Grupo 6</h1>
-Trabajo en grupo, laboratio 1 grupo 6, MCIB-B
-Objetivo
-Diseñar, construir, contenerizar y desplegar un API funcional, aplicando buenas prácticas de desarrollo, versionamiento, pruebas y despliegue en la nube.
 
-Durante el ejercicio deberán usar correctamente:
+<h1 align="center">Laboratorio 1 Grupo 6</h1>
 
-GitHub → control de versiones y colaboración
+<p align="center">
+  <b>Trabajo en grupo - Laboratorio 1 Grupo 6 - MCIB-B</b>
+</p>
 
-Docker → contenerización
+<p align="center">
+  Diseño, construcción, contenerización y despliegue de un API funcional aplicando buenas prácticas de desarrollo, versionamiento, pruebas y despliegue en la nube.
+</p>
 
-curl → pruebas de endpoints
+<hr>
 
-Google Cloud → despliegue en la nube
+<h2>Objetivo</h2>
 
+<p>
+  Diseñar, construir, contenerizar y desplegar un API funcional, aplicando buenas prácticas de desarrollo, versionamiento, pruebas y despliegue en la nube.
+</p>
 
-Parte 1 – Construcción del API
+<h2>Tecnologías y herramientas utilizadas</h2>
 
-Repositorio del proyecto
-El repositorio debe incluir:
+<p>
+  Durante el ejercicio se deberá usar correctamente:
+</p>
 
-Código fuente del API
+<ul>
+  <li><b>GitHub</b> → control de versiones y colaboración</li>
+  <li><b>Docker</b> → contenerización</li>
+  <li><b>curl</b> → pruebas de endpoints</li>
+  <li><b>Google Cloud</b> → despliegue en la nube</li>
+</ul>
 
-README documentado
+<hr>
 
-Dockerfile funcional
+<h2>Parte 1 – Construcción del API</h2>
 
-requirements.txt
+<h3>Repositorio del proyecto</h3>
+<p>El repositorio debe incluir:</p>
 
-API funcional
-El API puede desarrollarse con:
+<ul>
+  <li>Código fuente del API</li>
+  <li>README documentado</li>
+  <li>Dockerfile funcional</li>
+  <li>requirements.txt</li>
+</ul>
 
-Flask
+<h3>API funcional</h3>
+<p>El API puede desarrollarse con:</p>
 
-FastAPI
+<ul>
+  <li>Flask</li>
+  <li>FastAPI</li>
+  <li>Otro framework Python aprobado</li>
+</ul>
 
-Otro framework Python aprobado
+<h3>Funcionalidades mínimas</h3>
+<p>Debe existir al menos:</p>
 
-Funcionalidades mínimas
-Debe existir al menos:
+<ul>
+  <li>Endpoint <b>GET</b></li>
+  <li>Endpoint <b>POST</b></li>
+  <li>Validación básica de datos</li>
+  <li>Respuestas en formato JSON</li>
+</ul>
 
-Endpoint GET
+<h3>Creatividad (Puntos extra)</h3>
+<p>Ejemplos de mejoras posibles:</p>
 
-Endpoint POST
+<ul>
+  <li>Integración con APIs externas</li>
+  <li>Sistema de scoring</li>
+  <li>Procesamiento de datos</li>
+  <li>Logs estructurados</li>
+  <li>Autenticación básica</li>
+</ul>
 
-Validación básica de datos
+<hr>
 
-Respuestas en formato JSON
+<h2>Parte 2 – Uso de Branches</h2>
 
-Creatividad (Puntos extra)
-Ejemplos de mejoras posibles:
+<p>
+  Al menos una funcionalidad debe desarrollarse en una nueva branch y luego hacer merge a <code>main</code>.
+</p>
 
-Integración con APIs externas
+<p><b>Ejemplos:</b></p>
 
-Sistema de scoring
+<ul>
+  <li><code>feature/geolocalizacion</code></li>
+  <li><code>feature/scoring</code></li>
+  <li><code>feature/auth</code></li>
+</ul>
 
-Procesamiento de datos
+<hr>
 
-Logs estructurados
+<h2>Parte 3 – Contenerización</h2>
 
-Autenticación básica
+<p>El proyecto debe incluir:</p>
 
-Parte 2 – Uso de Branches
+<ul>
+  <li>Dockerfile funcional</li>
+  <li>Imagen que construya sin errores</li>
+  <li>Contenedor ejecutando el API correctamente</li>
+</ul>
 
-Al menos una funcionalidad debe desarrollarse en:
+<hr>
 
-Una branch nueva
+<h2>Parte 4 – Pruebas con curl</h2>
 
-Luego hacer merge a main
+<p>Se debe demostrar:</p>
 
-Ejemplos:
-feature/geolocalizacion
-feature/scoring
-feature/auth
+<ul>
+  <li>GET funcionando</li>
+  <li>POST funcionando</li>
+  <li>Manejo de errores</li>
+</ul>
 
-Parte 3 – Contenerización
+<hr>
 
-El proyecto debe incluir:
+<h2>Parte 5 – Despliegue en Cloud</h2>
 
-Dockerfile funcional
+<p>El API debe estar desplegado en la nube.</p>
 
-Imagen que construya sin errores
+<p><b>Opciones:</b></p>
 
-Contenedor ejecutando el API correctamente
+<ul>
+  <li>Cloud Run</li>
+  <li>Compute Engine</li>
+  <li>Otro servicio cloud aprobado</li>
+</ul>
 
-Parte 4 – Pruebas con curl
+<hr>
 
-Deben demostrar:
+<h2>Integrantes</h2>
 
-GET funcionando
-
-POST funcionando
-
-Manejo de errores
-
-Parte 5 – Despliegue en Cloud
-
-El API debe estar desplegado en la nube.
-
-Opciones:
-
-Cloud Run
-
-Compute Engine
-
-Otro servicio cloud aprobado
-
+<ul>
+  <li>Nombre 1</li>
+  <li>Nombre 2</li>
+  <li>Nombre 3</li>
+</ul>
