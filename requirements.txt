@@ -1,1 +1,14 @@
-# Requirements for the project
+# Framework base
+Flask>=4.0.0
+
+# Gestión de entorno y peticiones
+python-dotenv>=1.1.0
+requests>=2.35.0
+httpx>=0.28.0
+
+# Seguridad y Criptografía
+PyJWT>=2.10.0
+cryptography>=44.0.0
+
+# Servidor de Producción (para el Dockerfile)
+gunicorn>=23.0.0
