@@ -6,11 +6,10 @@ from flask import Flask, request, jsonify
 from functools import wraps
 from dotenv import load_dotenv
 
-# Carga de variables de entorno desde el archivo .env
 load_dotenv()
 
-# --- VALIDACIÓN CRÍTICA DE SEGURIDAD ---
 JWT_SECRET = os.getenv('JWT_SECRET')
+# Validación de la clave secreta para JWT
 if not JWT_SECRET:
     raise RuntimeError(
         "ERROR: No se encontró 'JWT_SECRET' en las variables de entorno. "
@@ -22,14 +21,13 @@ app.config['SECRET_KEY'] = JWT_SECRET
 VT_API_KEY = os.getenv('VT_API_KEY')
 PORT = int(os.getenv('PORT', 8080))
 
-# "Base de datos" interna de usuarios
+# Usuarios
 USERS = {
     "alan": "alan123",
     "diego": "diego123",
     "oscar": "oscar123"
 }
 
-# --- DECORADOR PARA VALIDACIÓN DE TOKEN BEARER ---
 def token_required(f):
     @wraps(f)
     def decorated(*args, **kwargs):
@@ -38,7 +36,7 @@ def token_required(f):
             auth_header = request.headers['Authorization']
             if auth_header.startswith("Bearer "):
                 token = auth_header.split(" ")[1]
-
+        # Validación de la presencia del token
         if not token:
             return jsonify({'message': 'Acceso denegado: Token no encontrado'}), 401
 
@@ -55,11 +53,10 @@ def token_required(f):
 
     return decorated
 
-# --- RUTAS DE LA API ---
-
 @app.route('/api/v1/login', methods=['POST'])
 def login():
     auth = request.get_json()
+    # Validación de la presencia de credenciales en el cuerpo de la solicitud
     if not auth or not auth.get('username') or not auth.get('password'):
         return jsonify({"message": "Faltan credenciales"}), 400
 
@@ -74,7 +71,7 @@ def login():
         }, app.config['SECRET_KEY'], algorithm="HS256")
         
         return jsonify({'token': token, 'type': 'Bearer'})
-
+    # Validación de credenciales incorrectas
     return jsonify({"message": "Credenciales inválidas"}), 401
 
 @app.route('/api/v1/status', methods=['GET'])
@@ -92,11 +89,10 @@ def get_status(current_user):
 def analyze_hash(current_user):
     body = request.get_json()
     file_hash = body.get('hash')
-
+    # Validación de la presencia del hash en el cuerpo de la solicitud
     if not file_hash:
         return jsonify({"error": "Se requiere un hash para el tratamiento de datos"}), 400
-
-    # Orquestación con API Externa (VirusTotal)
+    # Hash con VirusTotal para obtener el análisis de seguridad
     url = f"https://www.virustotal.com/api/v3/files/{file_hash}"
     headers = {"x-apikey": VT_API_KEY}
 
@@ -119,9 +115,9 @@ def analyze_hash(current_user):
                 "risk_score": f"{malicious}/{sum(stats.values())}",
                 "processed_at": datetime.datetime.now().isoformat()
             })
-        
+        # Validación de hash no encontrado en VT
         return jsonify({"message": "Recurso no encontrado en VT"}), 404
-
+    # Validación de errores en la conexión externa
     except Exception as e:
         return jsonify({"error": "Fallo en la conexión externa"}), 500
 
