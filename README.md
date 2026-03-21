@@ -14,9 +14,9 @@
 <h2>Integrantes</h2>
 
 <ul>
-  <li>Nombre 1</li>
-  <li>Nombre 2</li>
-  <li>Nombre 3</li>
+  <li>AMAGUA OSCAR</li>
+  <li>OJEDA ALAN</li>
+  <li>SUNTAXI DIEGO</li>
 </ul>
 <hr>
 
