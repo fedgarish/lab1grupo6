@@ -1,14 +1,14 @@
 # Framework base
-Flask>=4.0.0
+Flask==3.1.0
 
 # Gestión de entorno y peticiones
 python-dotenv>=1.1.0
-requests>=2.35.0
-httpx>=0.28.0
+requests>=2.32.0
+httpx>=0.27.0
 
 # Seguridad y Criptografía
-PyJWT>=2.10.0
-cryptography>=44.0.0
+PyJWT>=2.9.0
+cryptography>=43.0.0
 
 # Servidor de Producción (para el Dockerfile)
-gunicorn>=23.0.0
+gunicorn>=22.0.0
