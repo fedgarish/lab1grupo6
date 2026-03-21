@@ -1,19 +1,19 @@
-# 1. Usamos una imagen ligera de Python 3.11
+# 1. Usamos una imagen de Python
 FROM python:3.11-slim
 
-# 2. Establecemos el directorio de trabajo dentro del contenedor
+# 2. Directorio de trabajo
 WORKDIR /app
 
-# 3. Copiamos solo el archivo de requerimientos primero (para aprovechar el caché de Docker)
+# 3. Copiamos archivo de requerimiento
 COPY requirements.txt .
 
 # 4. Instalamos las dependencias
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 5. Copiamos el resto de los archivos (app.py, .env, etc.)
+# 5. Copiamos todos los archivos
 COPY . .
 
-# 6. Exponemos el puerto 8080 que definimos en la API
+# 6. Exponemos el puerto 8080
 EXPOSE 8080
 
 # 7. Comando para ejecutar la aplicación
