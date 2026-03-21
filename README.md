@@ -11,7 +11,13 @@
 <p align="center">
   Diseño, construcción, contenerización y despliegue de un API funcional aplicando buenas prácticas de desarrollo, versionamiento, pruebas y despliegue en la nube.
 </p>
+<h2>Integrantes</h2>
 
+<ul>
+  <li>Nombre 1</li>
+  <li>Nombre 2</li>
+  <li>Nombre 3</li>
+</ul>
 <hr>
 
 <h2>Objetivo</h2>
@@ -133,10 +139,3 @@
 
 <hr>
 
-<h2>Integrantes</h2>
-
-<ul>
-  <li>Nombre 1</li>
-  <li>Nombre 2</li>
-  <li>Nombre 3</li>
-</ul>
