@@ -1,4 +1,4 @@
-![Logo UIDE](Evidencias/logo_uide.jpg)
+![Logo UIDE](Evidencias/Logo_UIDE.jpg)
 # Laboratorio 1 Grupo 6
 Trabajo en grupo, laboratio 1 grupo 6, MCIB-B
 Objetivo
