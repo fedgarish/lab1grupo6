@@ -2,7 +2,7 @@
   <img src="Evidencias/logo-uide.webp" width="220" alt="Logo UIDE">
 </p>
 
-<h1 align="center">🚀 Laboratorio 1 - Grupo 6</h1>
+<h1 align="center">Laboratorio 1 - Grupo 6</h1>
 
 <p align="center">
   <b>MCIB-B</b><br>
