@@ -1,7 +1,7 @@
 <p align="center">
   <img src="Evidencias/logo-uide.webp" width="300">
 </p>
-# Laboratorio 1 Grupo 6
+<h1>Laboratorio 1 Grupo 6</h1>
 Trabajo en grupo, laboratio 1 grupo 6, MCIB-B
 Objetivo
 Diseñar, construir, contenerizar y desplegar un API funcional, aplicando buenas prácticas de desarrollo, versionamiento, pruebas y despliegue en la nube.
