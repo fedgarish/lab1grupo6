@@ -19,7 +19,13 @@
 
 <h2>Introducción</h2>
 <p>
- CONTEXTO DE LO QUE HACE LA API
+El presente proyecto tiene como objetivo el diseño, construcción, contenerización y despliegue de una API funcional orientada al análisis de seguridad de archivos. La solución desarrollada permite autenticar usuarios mediante tokens JWT, procesar solicitudes a través de endpoints REST (GET y POST), y consumir servicios externos, específicamente la API de VirusTotal, con el fin de obtener información sobre posibles amenazas asociadas a un hash de archivo.
+
+La API actúa como un intermediario inteligente que no solo consulta información externa, sino que también aplica lógica propia para interpretar los resultados, generando un veredicto simplificado y un indicador de riesgo. De esta manera, se simula el funcionamiento de sistemas utilizados en entornos reales de ciberseguridad, como centros de operaciones de seguridad (SOC), donde es necesario analizar rápidamente archivos sospechosos y tomar decisiones informadas.
+
+Adicionalmente, el proyecto incorpora buenas prácticas de desarrollo de software, incluyendo el uso de control de versiones con GitHub para la gestión colaborativa del código, la contenerización mediante Docker para asegurar la portabilidad y consistencia del entorno de ejecución, la validación de endpoints utilizando herramientas como curl, y el despliegue en la nube a través de servicios como Google Cloud, garantizando así la disponibilidad y accesibilidad del servicio.
+
+En conjunto, esta solución no solo cumple con los requerimientos técnicos planteados, sino que también representa una aproximación práctica al desarrollo de APIs modernas, seguras y escalables, integrando múltiples tecnologías y servicios en un flujo de trabajo completo desde el desarrollo hasta el despliegue en producción.
 </p>
 
 <hr>
@@ -196,8 +202,22 @@
 </ul>
 
 <h3>Evidencia</h3>
+<h5>Proceso de despliegue en Google Cloud</h5>
 <p align="center">
-  <img src="Evidencias/parte5.png" width="500">
+  <img src="Evidencias/parte5-1.png" width="500">
+  <img src="Evidencias/parte5-2.png" width="500">
+</p>
+<h5>Verificación de funcionalidad de endpoints</h5>
+<p align="center">
+  <img src="Evidencias/parte5-3.png" width="500">
+</p>
+<h5>Verificación de metricas generadas de la API</h5>
+<p align="center">
+  <img src="Evidencias/parte5-4.png" width="500">
+</p>
+<h5>Eliminación del despliegue</h5>
+<p align="center">
+  <img src="Evidencias/parte5-5.png" width="500">
 </p>
 
 <h3>Comentario</h3>
@@ -214,6 +234,7 @@ El uso de ramas permite trabajar de forma ordenada sin afectar la rama principal
   <li>La integración de variables sensibles mediante .env dentro del flujo de Docker proporcionó un nivel adicional de organización y seguridad. Esto evitó exponer claves privadas o configuraciones críticas en el repositorio, manteniendo buenas prácticas en la gestión de credenciales y configuraciones.</li>
   <li>El uso de Docker permitió estandarizar completamente el entorno de ejecución, garantizando que la API se comporte de la misma manera en cualquier máquina. Esto eliminó problemas recurrentes asociados a diferencias en versiones de Python, dependencias o configuraciones locales entre los integrantes del equipo.</li>
   <li>La integración del archivo .env dentro del flujo de Docker reforzó la seguridad al evitar exponer claves sensibles, además de simplificar la configuración del entorno.</li>
+  <li>El archivo .env no funcionó correctamente en GCloud porque incluía variables que la plataforma tiene reservadas, como PORT. Como medida de seguridad, GCloud activa un bloqueo por timeout cuando una aplicación no arranca de manera adecuada, lo que impidió que la API se desplegara correctamente.</li>
 </ul>
 
 <hr>
