@@ -60,7 +60,7 @@
 
 <h3>Evidencia</h3>
 <p align="center">
-  <img src="Evidencias/parte1.png" width="500">
+  <img src="Evidencias/parte1-1.png" width="500">
 </p>
 
 <h3>Comentario</h3>
