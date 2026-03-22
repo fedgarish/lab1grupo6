@@ -124,3 +124,7 @@ def analyze_hash(current_user):
 if __name__ == '__main__':
     print(f"Iniciando API de Ciberseguridad en el puerto {PORT}...")
     app.run(host='0.0.0.0', port=PORT, debug=True)
+
+
+#####TEST
+
