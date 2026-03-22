@@ -17,6 +17,13 @@
 </ul>
 <hr>
 
+<h2>Introducción</h2>
+<p>
+ CONTEXTO DE LO QUE HACE LA API
+</p>
+
+<hr>
+
 <h2>Objetivo</h2>
 <p>
   Diseñar, construir, contenerizar y desplegar un API funcional, aplicando buenas prácticas de desarrollo, versionamiento, pruebas y despliegue en la nube.
@@ -134,8 +141,17 @@
 </ul>
 
 <h3>Evidencia</h3>
+<h5>Creación del docker</h5>
 <p align="center">
-  <img src="Evidencias/parte3.png" width="500">
+  <img src="Evidencias/parte3-1.png" width="500">
+</p>
+<h5>Estructura del docker</h5>
+<p align="center">
+  <img src="Evidencias/parte3-2.png" width="500">
+</p>
+<h5>Prueba de creacion del docker sin error</h5>
+<p align="center">
+  <img src="Evidencias/parte3-3.png" width="500">
 </p>
 
 <h3>Comentario</h3>
@@ -154,9 +170,15 @@
 </ul>
 
 <h3>Evidencia</h3>
+<h5>Prueba de funcionalidad endpoints GET y POST con Curl</h5>
 <p align="center">
-  <img src="Evidencias/parte4.png" width="500">
+  <img src="Evidencias/parte4-1.png" width="500">
 </p>
+<h5>Prueba de funcionalidad validación errores con Curl</h5>
+<p align="center">
+  <img src="Evidencias/parte4-2.png" width="500">
+</p>
+
 
 <h3>Comentario</h3>
 <p>
