@@ -12,7 +12,7 @@
 
 <ul>
   <li>AMAGUA OSCAR</li>
-  <li>OJEDA ALIN</li>
+  <li>OJEDA ALAN</li>
   <li>SUNTAXI DIEGO</li>
 </ul>
 <hr>
@@ -204,6 +204,14 @@
 <p>
   El despliegue en la nube permitió acceder al API de forma remota, garantizando disponibilidad y escalabilidad.
 </p>
+
+<hr>
+<h2>Conclusiones</h2>
+<ul>
+  <li>Cloud Run</li>
+  <li>Compute Engine</li>
+  <li>Otro servicio cloud</li>
+</ul>
 
 <hr>
 
