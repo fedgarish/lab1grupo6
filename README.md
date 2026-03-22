@@ -118,7 +118,7 @@
 <h3>Evidencia</h3>
 <h5>Historial de cambios en ramificaciones</h5>
 <p align="center">
-  <img src="Evidencias/parte2-1.png" width="500">
+  <img src="Evidencias/parte2-1.jfif" width="500">
 </p>
 <h5>Estructura de ramificaciones de git</h5>
 <p align="center">
@@ -151,7 +151,7 @@
 </p>
 <h5>Prueba de creacion del docker sin error</h5>
 <p align="center">
-  <img src="Evidencias/parte3-3.png" width="500">
+  <img src="Evidencias/parte3-3.jfif" width="500">
 </p>
 
 <h3>Comentario</h3>
