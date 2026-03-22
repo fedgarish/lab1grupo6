@@ -59,10 +59,35 @@
 </ul>
 
 <h3>Evidencia</h3>
+<h5>Codigo API</h5>
 <p align="center">
   <img src="Evidencias/parte1-1.png" width="500">
+  <img src="Evidencias/parte1-2.jfif" width="500">
 </p>
-
+<h5>Estructura del codigo de la API</h5>
+<p align="center">
+  <img src="Evidencias/parte1-3.png" width="500">
+</p>
+<h5>Codigo Requirements</h5>
+<p align="center">
+  <img src="Evidencias/parte1-4.jfif" width="500">
+</p>
+<h5>Codigo Dockerfile</h5>
+<p align="center">
+  <img src="Evidencias/parte1-5.png" width="500">
+</p>
+<h5>Codigo de gitignore</h5>
+<p align="center">
+  <img src="Evidencias/parte1-6.png" width="500">
+</p>
+<h5>Codigo de dockerignore</h5>
+<p align="center">
+  <img src="Evidencias/parte1-7.png" width="500">
+</p>
+<h5>Codigo de Env</h5>
+<p align="center">
+  <img src="Evidencias/parte1-8.png" width="500">
+</p>
 <h3>Comentario</h3>
 <p>
   En esta fase se desarrolló la estructura base del API, implementando endpoints GET y POST con validaciones básicas. 
@@ -84,8 +109,13 @@
 </ul>
 
 <h3>Evidencia</h3>
+<h5>Historial de cambios en ramificaciones</h5>
 <p align="center">
-  <img src="Evidencias/parte2.png" width="500">
+  <img src="Evidencias/parte2-1.png" width="500">
+</p>
+<h5>Estructura de ramificaciones de git</h5>
+<p align="center">
+  <img src="Evidencias/parte2-2.png" width="500">
 </p>
 
 <h3>Comentario</h3>
