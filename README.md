@@ -282,7 +282,58 @@ Ejemplo de respuesta mejorada del API:
 <p>
 Con estas mejoras, el sistema no solo entrega un resultado, sino que también proporciona contexto, facilitando la toma de decisiones por parte del usuario y aumentando la confianza en el análisis.
 </p>
+<p>
+  <strong>2. ¿Qué consideraciones de seguridad implementarían para proteger tanto los hashes enviados por los usuarios como las respuestas de la API?</strong>
+</p>
 
+<p>
+Para proteger los hashes enviados por los usuarios y las respuestas generadas por la API, se deben aplicar controles de seguridad en la comunicación, autenticación, validación de datos, manejo de errores y protección de credenciales.
+</p>
+
+<ul>
+  <li>
+    <b>Uso de HTTPS:</b> todas las solicitudes deben viajar cifradas para evitar que el hash, el token o la respuesta puedan ser interceptados.
+  </li>
+  <li>
+    <b>Autenticación con Bearer Token/JWT:</b> los endpoints protegidos deben requerir un token válido antes de permitir consultas al servicio.
+  </li>
+  <li>
+    <b>Validación del hash:</b> se debe verificar que el valor recibido tenga un formato válido, por ejemplo MD5, SHA1 o SHA256, evitando entradas malformadas.
+  </li>
+  <li>
+    <b>Protección de credenciales:</b> las claves como API Keys, secretos JWT o tokens no deben almacenarse directamente en el código, sino mediante variables de entorno.
+  </li>
+  <li>
+    <b>No exponer información sensible en logs:</b> se debe evitar registrar tokens, API Keys o hashes completos innecesariamente.
+  </li>
+  <li>
+    <b>Manejo seguro de errores:</b> las respuestas de error no deben mostrar rutas internas, trazas del servidor ni detalles técnicos sensibles.
+  </li>
+  <li>
+    <b>Rate limiting:</b> limitar la cantidad de solicitudes por usuario o IP para evitar abuso, ataques de fuerza bruta o consumo excesivo del servicio.
+  </li>
+  <li>
+    <b>Control de respuestas:</b> la API debe devolver únicamente la información necesaria para el usuario, evitando exponer datos internos del sistema o de la API externa.
+  </li>
+</ul>
+
+<p>
+Un ejemplo de respuesta segura ante un hash inválido sería:
+</p>
+
+<pre><code class="language-json">
+{
+  "error": "Formato de hash no válido"
+}
+</code></pre>
+
+<p>
+En cambio, no sería recomendable devolver errores con información interna como rutas del servidor, líneas de código, claves, tokens o mensajes técnicos detallados.
+</p>
+
+<p>
+En el caso del proyecto, la API ya utiliza autenticación mediante token tipo <b>Bearer</b> y se encuentra desplegada en Google Cloud Run mediante HTTPS. Como mejora adicional, se recomienda configurar expiración de tokens, ocultar credenciales mediante variables de entorno, controlar logs y aplicar límites de solicitudes para fortalecer la seguridad del servicio.
+</p>
 <hr>
 <h3>Conclusiones</h3>
 <ul>
