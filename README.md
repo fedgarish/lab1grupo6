@@ -226,6 +226,12 @@ En conjunto, esta solución no solo cumple con los requerimientos técnicos plan
 </p>
 
 <hr>
+<h3>Preguntas trabajo final</h3>
+<p>
+  <strong>1.¿Cómo podrían mejorar la lógica de interpretación de resultados para que el “veredicto simplificado” sea más transparente, explicable y confiable para el usuario?</strong>
+</p>
+
+<hr>
 <h2>Conclusiones</h2>
 <ul>
   <li>La correcta configuración de las variables globales de Git es fundamental para identificar adecuadamente los commits y mantener un historial limpio en trabajos colaborativos.</li>
