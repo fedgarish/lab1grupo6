@@ -227,12 +227,64 @@ En conjunto, esta solución no solo cumple con los requerimientos técnicos plan
 
 <hr>
 <h3>Preguntas trabajo final</h3>
+
 <p>
-  <strong>1.¿Cómo podrían mejorar la lógica de interpretación de resultados para que el “veredicto simplificado” sea más transparente, explicable y confiable para el usuario?</strong>
+  <strong>1. ¿Cómo podrían mejorar la lógica de interpretación de resultados para que el “veredicto simplificado” sea más transparente, explicable y confiable para el usuario?</strong>
+</p>
+
+<p>
+Para mejorar la interpretación de resultados y hacer el veredicto más transparente, explicable y confiable, se propone enriquecer la lógica actual basada en el <code>risk_score</code> y el número de detecciones obtenidas desde la API de VirusTotal.
+</p>
+
+<p>
+En lugar de mostrar únicamente un resultado binario como <b>"AMENAZA DETECTADA"</b>, se puede implementar un sistema más descriptivo que incluya:
+</p>
+
+<ul>
+  <li>Clasificación por nivel de riesgo (Bajo, Medio, Alto, Crítico)</li>
+  <li>Porcentaje de detección en relación al total de motores analizados</li>
+  <li>Explicación clara del resultado obtenido</li>
+  <li>Recomendaciones para el usuario según el nivel de riesgo</li>
+</ul>
+
+<p>
+Adicionalmente, se puede definir una lógica de clasificación basada en rangos:
+</p>
+
+<ul>
+  <li>0 detecciones → Seguro</li>
+  <li>1–10 detecciones → Bajo riesgo</li>
+  <li>11–30 detecciones → Sospechoso</li>
+  <li>31–60 detecciones → Alto riesgo</li>
+  <li>Más de 60 detecciones → Crítico / Amenaza detectada</li>
+</ul>
+
+<p>
+Ejemplo de respuesta mejorada del API:
+</p>
+
+<pre><code class="language-json">
+{
+  "hash": "275a021bbfd6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f",
+  "veredicto": "ALTO RIESGO",
+  "nivel": "CRITICO",
+  "confianza": "88%",
+  "detalle": {
+    "detecciones": 67,
+    "total_motores": 76,
+    "porcentaje_deteccion": 88
+  },
+  "resumen": "El archivo ha sido identificado como malicioso por múltiples motores de análisis.",
+  "recomendacion": "Se recomienda no ejecutar el archivo y proceder con su eliminación."
+}
+</code></pre>
+
+<p>
+Con estas mejoras, el sistema no solo entrega un resultado, sino que también proporciona contexto, facilitando la toma de decisiones por parte del usuario y aumentando la confianza en el análisis.
 </p>
 
 <hr>
-<h2>Conclusiones</h2>
+<h3>Conclusiones</h3>
 <ul>
   <li>La correcta configuración de las variables globales de Git es fundamental para identificar adecuadamente los commits y mantener un historial limpio en trabajos colaborativos.</li>
   <li>El flujo adecuado de trabajo siempre debe iniciar con un git pull, seguido del desarrollo, commit y finalmente un git push, evitando conflictos y pérdidas de información.
